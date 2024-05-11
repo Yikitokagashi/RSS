@@ -1,0 +1,1153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>RSS - List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/image/icon.png">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+
+    </head>
+
+    <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":true, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>   
+    
+    <!-- Begin page -->
+        <div class="wrapper">
+            
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+                <div crlass="content p-lg-1">
+                    <div class="navbar-custom pt-2 d-flex justify-content-between bg-secondary" style="left: 0px;">
+                        <h1 class="page-title font-24 fw-bolder text-light ms-2">Category</h1>
+                        <!-- Default dropstart button -->
+                        <div class="btn-group dropstart me-2">
+                            <button type="button" class="btn mdi mdi-menu mdi-36px text-light p-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="dropdown-menu">
+                                <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="btn p-0 active show" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                        <i class="mdi mdi-food-croissant mdi-24px d-md-none d-block"> Dry Making</i>
+                                        <span class="mdi mdi-food-croissant mdi-24px d-none d-md-block"> Dry Making</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-bottle-soda-classic-outline mdi-24px d-md-none d-block" > Beverage</i>
+                                        <span class="mdi mdi-bottle-soda-classic-outline mdi-24px d-none d-md-block"> Beverage</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-food mdi-24px d-md-none d-block" > Sweets & Snacks</i>
+                                        <span class="mdi mdi-food mdi-24px d-none d-md-block"> Sweet & Snacks</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-general-tab" data-bs-toggle="pill" href="#v-pills-general" role="tab" aria-controls="v-pills-general"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-cart-variant mdi-24px d-md-none d-block" > General</i>
+                                        <span class="mdi mdi-cart-variant mdi-24px d-none d-md-block"> General</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-cold-tab" data-bs-toggle="pill" href="#v-pills-cold" role="tab" aria-controls="v-pills-cold"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-fridge-outline mdi-24px d-md-none d-block" > Cold</i>
+                                        <span class="mdi mdi-fridge-outline mdi-24px d-none d-md-block"> Cold</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-cleaning-tab" data-bs-toggle="pill" href="#v-pills-cleaning" role="tab" aria-controls="v-pills-cleaning"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-broom mdi-24px d-md-none d-block" > Cleaning</i>
+                                        <span class="mdi mdi-broom mdi-24px d-none d-md-block"> Cleaning</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-frozen-tab" data-bs-toggle="pill" href="#v-pills-frozen" role="tab" aria-controls="v-pills-frozen"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-food-steak mdi-24px d-md-none d-block" > Frozen</i>
+                                        <span class="mdi mdi-food-steak mdi-24px d-none d-md-block"> Frozen</span>
+                                    </a>
+                                    <a class="nav-link p-0" id="v-pills-groceries-tab" data-bs-toggle="pill" href="#v-pills-groceries" role="tab" aria-controls="v-pills-groceries"
+                                        aria-selected="false">
+                                        <i class="mdi mdi-food-apple-outline mdi-24px d-md-none d-block" > Groceries</i>
+                                        <span class="mdi mdi-food-apple-outline mdi-24px d-none d-md-block"> Groceries</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <div class="card mt-5">
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- end col-->
+                                    <div class="col-sm-12">
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                            <div class="tab-pane fade active show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                                <div class="d-flex justify-content-end mb-3 border-1 border-bottom p-2">
+                                                    <button type="button" id="btn-dm" class="btn btn-outline-info btn-rounded" onclick="click_dm()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img src="assets/image/list/daron-cane-sugar.png" class="avatar-xl mb-1">
+                                                                <h4 class="card-title">Daron Cane Sugar</h4>
+                                                                <input id="dm" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/daron-sugar-bio.png">
+                                                                <h4 class="card-title">Daron Sugar Bio</h4>
+                                                                <input id="dm1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/classic-flour.png">
+                                                                <h4 class="card-title">Classic Flour</h4>
+                                                                <input id="dm2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/supreme-flour.png">
+                                                                <h4 class="card-title">Supreme Flour</h4>
+                                                                <input id="dm3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/powdered-sugar.png">
+                                                                <h4 class="card-title">Powdered Sugar</h4>
+                                                                <input id="dm4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/susu-sugar.png">
+                                                                <h4 class="card-title">Susu Sugar</h4>
+                                                                <input id="dm5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/whole-wheat-flour.png">
+                                                                <h4 class="card-title">Whole Wheat Flour</h4>
+                                                                <input id="dm6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card shadow-lg">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/chocolate-powder.png">
+                                                                <h4 class="card-title">Chocolate Powder</h4>
+                                                                    <input id="dm7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        
+                                                    </div>
+                                                </div>        
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_b()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/orange-soda.png">
+                                                                <h4 class="card-title">Orange Soda</h4>
+                                                                <input id="b" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/pulp-soda.png">
+                                                                <h4 class="card-title">Pulp Soda</h4>
+                                                                <input id="b1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/zap-soda.png">
+                                                                <h4 class="card-title">Zap Soda</h4>
+                                                                <input id="b2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/water.png">
+                                                                <h4 class="card-title">Water</h4>
+                                                                <input id="b3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/cola.png">
+                                                                <h4 class="card-title">Cola</h4>
+                                                                <input id="b4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/tropico-soda.png">
+                                                                <h4 class="card-title">Tropico Soda</h4>
+                                                                <input id="b5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/apple-juice.png">
+                                                                <h4 class="card-title">Apple Juice</h4>
+                                                                <input id="b6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/soda-pack.png">
+                                                                <h4 class="card-title">Soda Pack</h4>
+                                                                <input id="b7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/zap-soda-pack.png">
+                                                                <h4 class="card-title">Zap Soda Pack</h4>
+                                                                <input id="b8" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_ss()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/chokipik-cereal.png">
+                                                                <h4 class="card-title">Chokipik Cereal</h4>
+                                                                <input id="ss" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/candy-pack-strawberry.png">
+                                                                <h4 class="card-title">Candy Pack Strawberry</h4>
+                                                                <input id="ss1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/covido-chips.png">
+                                                                <h4 class="card-title">Covido Chips</h4>
+                                                                <input id="ss2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/trutella-chocolate-spread.png">
+                                                                <h4 class="card-title">Trutella Chocolate Spread</h4>
+                                                                <input id="ss3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crispy-chibi-cereal.png">
+                                                                <h4 class="card-title">Crispy Chibi Cereal</h4>
+                                                                <input id="ss4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/vin-chips.png">
+                                                                <h4 class="card-title">Vin Chips</h4>
+                                                                <input id="ss5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_g()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/panzati-penne.png">
+                                                                <h4 class="card-title">Panzati Penne</h4>
+                                                                <input id="g" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/bread.png">
+                                                                <h4 class="card-title">Bread</h4>
+                                                                <input id="g1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/big-bread.png">
+                                                                <h4 class="card-title">Big Bread</h4>
+                                                                <input id="g2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/bio-egg-12x.png">
+                                                                <h4 class="card-title">Bio Eggs 12x</h4>
+                                                                <input id="g3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/bio-egg-8x.png">
+                                                                <h4 class="card-title">Bio Egg 8x</h4>
+                                                                <input id="g4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/bio-egg-4x.png">
+                                                                <h4 class="card-title">Bio Egg 4x</h4>
+                                                                <input id="g5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/ketchup.png">
+                                                                <h4 class="card-title">Ketchup</h4>
+                                                                <input id="g6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/mayo.png">
+                                                                <h4 class="card-title">Mayo</h4>
+                                                                <input id="g7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/oil.png">
+                                                                <h4 class="card-title">Oil</h4>
+                                                                <input id="g8" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/milk.png">
+                                                                <h4 class="card-title">Milk</h4>
+                                                                <input id="g9" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/lustupacru-elbows.png">
+                                                                <h4 class="card-title">Lustupacru Elbows</h4>
+                                                                <input id="g10" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/barillo-pasta.png">
+                                                                <h4 class="card-title">Barillo Pasta</h4>
+                                                                <input id="g11" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/uncle-tony-rice.png">
+                                                                <h4 class="card-title">Uncle Tony Rice</h4>
+                                                                <input id="g12" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/elo-spagetti.png">
+                                                                <h4 class="card-title">Elo Spagetti</h4>
+                                                                <input id="g13" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/honey-bee-cereal.png">
+                                                                <h4 class="card-title">Honey Bee Cereal</h4>
+                                                                <input id="g14" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/big-can-of-fish.png">
+                                                                <h4 class="card-title">Big Can of Fish</h4>
+                                                                <input id="g15" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/can-of-fish.png">
+                                                                <h4 class="card-title">Can of Fish</h4>
+                                                                <input id="g16" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/pea-can.png">
+                                                                <h4 class="card-title">Pea Can</h4>
+                                                                <input id="g17" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/narvalo-coffee-black.png">
+                                                                <h4 class="card-title">Narvalo Coffee Black</h4>
+                                                                <input id="g18" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/orange-juice.png">
+                                                                <h4 class="card-title">Orange Juice</h4>
+                                                                <input id="g19" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end tab-content-->
+                                            <div class="tab-pane fade" id="v-pills-cold" role="tabpanel" aria-labelledby="v-pills-cold-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_c()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/vanilla-yogurt-x12.png">
+                                                                <h4 class="card-title">Vanilla Yogurt x12</h4>
+                                                                <input id="c" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/fruit-yogurt-x12.png">
+                                                                <h4 class="card-title">Fruit Yogurt x12</h4>
+                                                                <input id="c1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/plain-yogurt-x12.png">
+                                                                <h4 class="card-title">Plain Yogurt x12</h4>
+                                                                <input id="c2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/salmon-slices.png">
+                                                                <h4 class="card-title">Salmon Slices</h4>
+                                                                <input id="c3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/mozzarella-cheese.png">
+                                                                <h4 class="card-title">Mozzarella Cheese</h4>
+                                                                <input id="c4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/sliced-prosciuto.png">
+                                                                <h4 class="card-title">Sliced Prosciuto</h4>
+                                                                <input id="c5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/gruyere-cheese.png">
+                                                                <h4 class="card-title">Gruyere Cheese</h4>
+                                                                <input id="c6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <img class="avatar-xl mb-1" src="assets/image/list/comte-cheese.png">
+                                                            <div class="card-body p-1 text-center">
+                                                                <h4 class="card-title">Comte Cheese</h4>
+                                                                <input id="c7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/fresh-cream.png">
+                                                                <h4 class="card-title">Fresh Cream</h4>
+                                                                <input id="c8" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/mimolette.png">
+                                                                <h4 class="card-title">Mimolette</h4>
+                                                                <input id="c9" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/ham-slices.png">
+                                                                <h4 class="card-title">Ham Slices</h4>
+                                                                <input id="c10" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-cleaning" role="tabpanel" aria-labelledby="v-pills-cleaning-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_cl()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/sapu-dish-soap.png">
+                                                                <h4 class="card-title">Sapu Dish Soap</h4>
+                                                                <input id="cl" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/semagik-dishwasher-detergent.png">
+                                                                <h4 class="card-title">Semagik Diswasher Detergent</h4>
+                                                                <input id="cl1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/wesh-spray.png">
+                                                                <h4 class="card-title">Wesh Spray</h4>
+                                                                <input id="cl2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/soft-cleanser.png">
+                                                                <h4 class="card-title">Soft Cleanser</h4>
+                                                                <input id="cl3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/touprop-cleanser.png">
+                                                                <h4 class="card-title">Touprop Cleanser</h4>
+                                                                <input id="cl4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/toudou-fabric-softener.png">
+                                                                <h4 class="card-title">Toudou Fabric Softener</h4>
+                                                                <input id="cl5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/boum-capsule.png">
+                                                                <h4 class="card-title">Boum Capsule</h4>
+                                                                <input id="cl6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/Shampoo.png">
+                                                                <h4 class="card-title">Shampoo</h4>
+                                                                <input id="cl7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/kaya-shampoo.png">
+                                                                <h4 class="card-title">Kaya Shampoo</h4>
+                                                                <input id="cl8" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/jaja-disinfecter.png">
+                                                                <h4 class="card-title">Jaja Disinfecter</h4>
+                                                                <input id="cl9" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/jaja-strong-disinfecter.png">
+                                                                <h4 class="card-title">Jaja Strong Disinfecter</h4>
+                                                                <input id="cl10" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/cleaning-dish.png">
+                                                                <h4 class="card-title">Cleaning Dish</h4>
+                                                                <input id="cl11" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/signoulos-toothpaste.png">
+                                                                <h4 class="card-title">Sigmoulos Toothpaste</h4>
+                                                                <input id="cl12" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/kilemol-bug-killer.png">
+                                                                <h4 class="card-title">Kilemol Bug Killer</h4>
+                                                                <input id="cl13" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-frozen" role="tabpanel" aria-labelledby="v-pills-frozen-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_f()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/pure-beef.png">
+                                                                <h4 class="card-title">Pure Beef</h4>
+                                                                <input id="f" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/chopped-beef.png">
+                                                                <h4 class="card-title">Chopped Beef</h4>
+                                                                <input id="f1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/veal.png">
+                                                                <h4 class="card-title">Veal</h4>
+                                                                <input id="f2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/chicken-wings.png">
+                                                                <h4 class="card-title">Chicken Wings</h4>
+                                                                <input id="f3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/lasagne-frozen.png">
+                                                                <h4 class="card-title">Lasagne Frozen</h4>
+                                                                <input id="f4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/maxi-ice-cream.png">
+                                                                <h4 class="card-title">Maxi Ice Cream</h4>
+                                                                <input id="f5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/pizza-mushroom.png">
+                                                                <h4 class="card-title">Pizza Mushroom</h4>
+                                                                <input id="f6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/pizza-cheddar.png">
+                                                                <h4 class="card-title">Pizza Cheddar</h4>
+                                                                <input id="f7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/pizza-ham.png">
+                                                                <h4 class="card-title">Pizza Ham</h4>
+                                                                <input id="f8" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/whole-chicken.png">
+                                                                <h4 class="card-title">Whole Chicken</h4>
+                                                                <input id="f9" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/sushi-pack.png">
+                                                                <h4 class="card-title">Sushi Pack</h4>
+                                                                <input id="f10" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-groceries" role="tabpanel" aria-labelledby="v-pills-groceries-tab">
+                                                <div class="row justify-content-end mb-2">
+                                                    <div class="col-sm-3 text-end">
+                                                        <button type="button" class="btn btn-outline-info btn-rounded" onclick="click_g()"><i class="mdi mdi-reload"></i> Clear</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-tomato.png">
+                                                                <h4 class="card-title">Crate of Tomato</h4>
+                                                                <input id="g" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-kiwi.png">
+                                                                <h4 class="card-title">Crate of Kiwi</h4>
+                                                                <input id="g1" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-lemon.png">
+                                                                <h4 class="card-title">Crate of Lemon</h4>
+                                                                <input id="g2" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-perry.png">
+                                                                <h4 class="card-title">Crate of Perry</h4>
+                                                                <input id="g3" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-banana.png">
+                                                                <h4 class="card-title">Crate of Banana</h4>
+                                                                <input id="g4" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-potato.png">
+                                                                <h4 class="card-title">Crate of Potato</h4>
+                                                                <input id="g5" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-mango.png">
+                                                                <h4 class="card-title">Crate of Mango</h4>
+                                                                <input id="g6" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-apple.png">
+                                                                <h4 class="card-title">Crate of Apple</h4>
+                                                                <input id="g7" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-grapefruit.png">
+                                                                <h4 class="card-title">Crate of Grapefruit</h4>
+                                                                <input id="g8" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-onion.png">
+                                                                <h4 class="card-title">Crate of Onion</h4>
+                                                                <input id="g9" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-clementine.png">
+                                                                <h4 class="card-title">Crate of Clementine</h4>
+                                                                <input id="g10" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-carrot.png">
+                                                                <h4 class="card-title">Crate of Carrot</h4>
+                                                                <input id="g11" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="card">
+                                                            <div class="card-body p-1 text-center">
+                                                                <img class="avatar-xl mb-1" src="assets/image/list/crate-of-avocado.png">
+                                                                <h4 class="card-title">Crate of Avocado</h4>
+                                                                <input id="g12" data-toggle="touchspin" type="text" value="0" style="width: 30px">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                <!-- end row-->
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- container -->
+                </div> 
+                <!-- content -->
+
+
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+
+
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+        <script>
+            function click_dm() {
+                document.getElementById('dm').value = 0;
+                document.getElementById('dm1').value = 0;
+                document.getElementById('dm2').value = 0;
+                document.getElementById('dm3').value = 0;
+                document.getElementById('dm4').value = 0;
+                document.getElementById('dm5').value = 0;
+                document.getElementById('dm6').value = 0;
+                document.getElementById('dm7').value = 0;
+            }
+
+            function click_b() {
+                document.getElementById('b').value = 0;
+                document.getElementById('b1').value = 0;
+                document.getElementById('b2').value = 0;
+                document.getElementById('b3').value = 0;
+                document.getElementById('b4').value = 0;
+                document.getElementById('b5').value = 0;
+                document.getElementById('b6').value = 0;
+                document.getElementById('b7').value = 0;
+                document.getElementById('b8').value = 0;
+            }
+
+            function click_ss() {
+                document.getElementById('ss').value = 0;
+                document.getElementById('ss1').value = 0;
+                document.getElementById('ss2').value = 0;
+                document.getElementById('ss3').value = 0;
+                document.getElementById('ss4').value = 0;
+                document.getElementById('ss5').value = 0;
+            }
+
+            function click_g() {
+                document.getElementById('g').value = 0;
+                document.getElementById('g1').value = 0;
+                document.getElementById('g2').value = 0;
+                document.getElementById('g3').value = 0;
+                document.getElementById('g4').value = 0;
+                document.getElementById('g5').value = 0;
+                document.getElementById('g6').value = 0;
+                document.getElementById('g7').value = 0;
+                document.getElementById('g8').value = 0;
+                document.getElementById('g9').value = 0;
+                document.getElementById('g10').value = 0;
+                document.getElementById('g11').value = 0;
+                document.getElementById('g12').value = 0;
+                document.getElementById('g13').value = 0;
+                document.getElementById('g14').value = 0;
+                document.getElementById('g15').value = 0;
+                document.getElementById('g16').value = 0;
+                document.getElementById('g17').value = 0;
+                document.getElementById('g18').value = 0;
+                document.getElementById('g19').value = 0;
+            }
+
+            function click_c() {
+                document.getElementById('c').value = 0;
+                document.getElementById('c1').value = 0;
+                document.getElementById('c2').value = 0;
+                document.getElementById('c3').value = 0;
+                document.getElementById('c4').value = 0;
+                document.getElementById('c5').value = 0;
+                document.getElementById('c6').value = 0;
+                document.getElementById('c7').value = 0;
+                document.getElementById('c8').value = 0;
+                document.getElementById('c9').value = 0;
+                document.getElementById('c10').value = 0;
+            }
+
+            function click_cl() {
+                document.getElementById('cl').value = 0;
+                document.getElementById('cl1').value = 0;
+                document.getElementById('cl2').value = 0;
+                document.getElementById('cl3').value = 0;
+                document.getElementById('cl4').value = 0;
+                document.getElementById('cl5').value = 0;
+                document.getElementById('cl6').value = 0;
+                document.getElementById('cl7').value = 0;
+                document.getElementById('cl8').value = 0;
+                document.getElementById('cl9').value = 0;
+                document.getElementById('cl10').value = 0;
+                document.getElementById('cl11').value = 0;
+                document.getElementById('cl12').value = 0;
+                document.getElementById('cl13').value = 0;
+            }
+
+            function click_f() {
+                document.getElementById('f').value = 0;
+                document.getElementById('f1').value = 0;
+                document.getElementById('f2').value = 0;
+                document.getElementById('f3').value = 0;
+                document.getElementById('f4').value = 0;
+                document.getElementById('f5').value = 0;
+                document.getElementById('f6').value = 0;
+                document.getElementById('f7').value = 0;
+                document.getElementById('f8').value = 0;
+                document.getElementById('f9').value = 0;
+                document.getElementById('f10').value = 0;
+            }
+
+            function click_g() {
+                document.getElementById('g').value = 0;
+                document.getElementById('g1').value = 0;
+                document.getElementById('g2').value = 0;
+                document.getElementById('g3').value = 0;
+                document.getElementById('g4').value = 0;
+                document.getElementById('g5').value = 0;
+                document.getElementById('g6').value = 0;
+                document.getElementById('g7').value = 0;
+                document.getElementById('g8').value = 0;
+                document.getElementById('g9').value = 0;
+                document.getElementById('g10').value = 0;
+                document.getElementById('g11').value = 0;
+                document.getElementById('g12').value = 0;
+                document.getElementById('g13').value = 0;
+                document.getElementById('g14').value = 0;
+                document.getElementById('g15').value = 0;
+                document.getElementById('g16').value = 0;
+                document.getElementById('g17').value = 0;
+                document.getElementById('g18').value = 0;
+                document.getElementById('g19').value = 0;
+
+            }
+        </script>
+    </body>
+</html>
